@@ -9,6 +9,7 @@ A modern React-based project utilizing the latest frontend technologies and tool
 - React - React version with improved rendering and concurrent features
 - Vite - Lightning-fast build tool and development server
 - Primary State Management: React's built-in useState Hook for local component state. 
+- Managing searchQuery, weatherData, isLoading, and error states using useState hooks.
 - Redux Toolkit - State management with simplified Redux setup
 - TailwindCSS - Utility-first CSS framework with extensive customization
 - React Router v6 - Declarative routing for React applications
