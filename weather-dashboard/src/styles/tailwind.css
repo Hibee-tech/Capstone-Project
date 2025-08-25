@@ -1,0 +1,155 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Core Design Tokens */
+@layer base {
+  :root {
+    /* Backgrounds */
+    --color-background: #F8FAFC;
+    --color-background-gradient: linear-gradient(135deg, #E0F2FE, #F8FAFC);
+    --color-surface: #FFFFFF;
+
+    /* Text */
+    --color-foreground: #1E293B;
+    --color-text-primary: #1E293B;
+    --color-text-secondary: #64748B;
+
+    /* Borders & Inputs */
+    --color-border: #E2E8F0;
+    --color-input: #FFFFFF;
+    --color-ring: #2563EB;
+
+    /* Semantic Colors */
+    --color-primary: #2563EB;
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #64748B;
+    --color-secondary-foreground: #FFFFFF;
+    --color-accent: #F59E0B;
+    --color-accent-foreground: #FFFFFF;
+    --color-success: #10B981;
+    --color-success-foreground: #FFFFFF;
+    --color-warning: #F59E0B;
+    --color-warning-foreground: #FFFFFF;
+    --color-error: #EF4444;
+    --color-error-foreground: #FFFFFF;
+    --color-destructive: #EF4444;
+    --color-destructive-foreground: #FFFFFF;
+
+    /* Card & Popover */
+    --color-card: #FFFFFF;
+    --color-card-foreground: #1E293B;
+    --color-popover: #FFFFFF;
+    --color-popover-foreground: #1E293B;
+
+    /* Muted / Disabled */
+    --color-muted: #F1F5F9;
+    --color-muted-foreground: #64748B;
+  }
+
+  /* Typography */
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  p, span, li, a {
+    color: var(--color-text-secondary);
+  }
+
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Utility Classes for Gradients & Surfaces */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #2563EB, #3B82F6);
+  }
+
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, #F59E0B, #FBBF24);
+  }
+
+  .bg-card {
+    background-color: var(--color-card);
+    color: var(--color-card-foreground);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .bg-popover {
+    background-color: var(--color-popover);
+    color: var(--color-popover-foreground);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-success {
+    color: var(--color-success);
+  }
+
+  .text-warning {
+    color: var(--color-warning);
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+
+  /* Responsive Typography */
+  h1 { font-size: 1.875rem; } /* 30px */
+  h2 { font-size: 1.5rem; }   /* 24px */
+  h3 { font-size: 1.25rem; }  /* 20px */
+  h4 { font-size: 1.125rem; } /* 18px */
+  h5 { font-size: 1rem; }     /* 16px */
+  h6 { font-size: 0.875rem; } /* 14px */
+
+  @media (min-width: 768px) {
+    h1 { font-size: 2.25rem; } /* 36px */
+    h2 { font-size: 1.875rem; } /* 30px */
+  }
+
+  /* Smooth borders and inputs */
+  input, select, textarea, button {
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-input);
+    color: var(--color-foreground);
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    border-color: var(--color-ring);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  }
+}

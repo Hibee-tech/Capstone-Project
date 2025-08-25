@@ -1,21 +1,22 @@
-
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
-import ScrollToTop from "components/ScrollToTop";
-import ErrorBoundary from "components/ErrorBoundary";
-import NotFound from "pages/NotFound";
-import GlobalWeatherOverviewDashboard from './pages/global-weather-overview-dashboard';
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import GlobalWeatherOverviewDashboard from "./pages/global-weather-overview-dashboard/index.jsx";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <ErrorBoundary>
-      <ScrollToTop />
-      <RouterRoutes>
-        {/* Define your route here */}
-        <Route path="/" element={<GlobalWeatherOverviewDashboard />} />
-        <Route path="/global-weather-overview-dashboard" element={<GlobalWeatherOverviewDashboard />} />
-        <Route path="*" element={<NotFound />} />
-      </RouterRoutes>
+        <ScrollToTop />
+        <RouterRoutes>
+          <Route path="/" element={<GlobalWeatherOverviewDashboard />} />
+          <Route
+            path="/global-weather-overview-dashboard"
+            element={<GlobalWeatherOverviewDashboard />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
   );
